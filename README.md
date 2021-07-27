@@ -33,10 +33,7 @@ This repository contains:
 
 ## Code Convention
 
-- flake8
-- filename: camelCase?
-- class: PascalCase
-- variable: snake_case
+Please follow the guidelines in [Dekutree Python Style Guide](https://github.com/aramnuri/dekutree/blob/master/Code-Convention.md)
 
 ## ToDo
 
