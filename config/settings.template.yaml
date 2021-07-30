@@ -1,0 +1,59 @@
+deku:
+  config:
+    active: local
+
+--- # local
+deku:
+  config: local
+
+pool:
+  pool-size: 5
+  pool-max-overflow: 5
+  pool-recycle: 500
+  time-out: 30
+
+databases:
+  template1:
+    engine: oracle
+    name: oracle1
+    user: userName
+    password: password
+    host: localhost
+    port: 11111
+    service-name: serviceName
+    pool-size: 3
+    pool-max-overflow: 0
+    pool-recycle: 500
+    time-out: 10
+    echo: debug
+  template2:
+    failover:
+      - engine: mysql
+        name: mysql1
+        user: userName
+        password: password
+        host: localhost
+        port: 22222
+      - engine: mysql
+        name: mysql2
+        user: userName
+        password: password
+        host: localhost
+        port: 22233
+
+logging:
+  level: 
+    root: info 
+    dbConnectTest: debug
+    specific-file-1: info
+    specific-file-2: error
+
+secret: secretKey
+
+--- # dev
+deku:
+  config: dev
+
+--- # prod
+dekul:
+  config: prod
