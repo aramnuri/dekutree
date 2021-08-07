@@ -1,0 +1,34 @@
+@startuml
+
+/' Set title of UML '/
+title Dekutree Framework Process Flowchart
+
+/' Option of Diagram '/
+skinparam {
+    defaultTextAlignment center
+    sequenceMessageAlign center
+    sequenceReferenceAlign center
+    monochrome false
+}
+
+/' Set actor and alias of actor '/
+actor User
+
+/' Start sequence '/
+' 1. User
+"User" --> "Config File" : Set user config\n(e.g. DB, Logging level)
+"User" --> "Stock Data" : Determine how to call\nstock data
+"User" -> "Strategy" : Create algorithm to use\nas trading strategy
+' 2. Logic Flow
+"Config File" <- "Setting Logic" : Read user config
+"Config File" -> "Setting Logic" : Set if user config exists
+"Setting Logic" -> "Investment Type" : Select Investment type\n1. Backtesting\n2. Virtual Investment\n3. Investment
+"Investment Type" -> "Trading Logic" : Execute Logic with selected\ninvestment type
+"Stock Data" --> "Trading Logic" : Get stock data if\ntype is "Backtesting"
+"Strategy" <- "Trading Logic" : Read user strategy
+"Strategy" -> "Trading Logic" : Trade with user strategy
+"Trading Logic" -> "Trading Logic" : Trade and Monitoring
+' 3. Result
+"User" <-- "Trading Logic" : Return result to user
+
+@enduml
