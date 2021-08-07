@@ -42,15 +42,17 @@ Please follow the guidelines in [Dekutree Python Style Guide](https://github.com
 - create prototype backtest function
 
 ## Setup
+
 ### Virtual Environment (venv)
+
 ```ps1
 > python -m venv venv
 > .\venv\Scripts\activate
 (venv) > python -m pip install -r requirements.txt
 ```
 
-
 ## Test
+
 ```ps1
 > python -m pip install -e .
 > python -m pip install pytest
@@ -76,4 +78,5 @@ This project exists thanks to all the people who contribute.
 
 ## License
 
-[MIT](LICENSE) © [rapsealk](https://github.com/rapsealk), [bludcode](https://github.com/bludcode)
+This project is released under the [BSD 3-Clause License](LICENSE.md).
+© [aramnuri](https://github.com/aramnuri/dekutree)
