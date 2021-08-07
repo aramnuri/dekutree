@@ -1,0 +1,8 @@
+# Python
+__pycache__
+*.egg-info
+
+# virtualenv
+venv
+
+.pytest_cache

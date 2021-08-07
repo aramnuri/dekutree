@@ -5,8 +5,8 @@ from sqlalchemy import pool, create_engine
 import os
 import sys
 sys.path.append(os.getcwd())
-from dekutree.config.propertyResolver import getProperty
-from dekutree.dbConnector.properties.sqlalchemy import arguments
+from dekutree.src.core.propertyResolver import getProperty
+from dekutree.src.core.dbConnector.properties.sqlalchemy import arguments
 
 ### variables
 RDBMS = ['oracle', 'mysql', 'maria']

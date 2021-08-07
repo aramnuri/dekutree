@@ -41,6 +41,22 @@ Please follow the guidelines in [Dekutree Python Style Guide](https://github.com
 - modify [readme.md](https://github.com/aramnuri/dekutree/blob/master/README.md)
 - create prototype backtest function
 
+## Setup
+### Virtual Environment (venv)
+```ps1
+> python -m venv venv
+> .\venv\Scripts\activate
+(venv) > python -m pip install -r requirements.txt
+```
+
+
+## Test
+```ps1
+> python -m pip install -e .
+> python -m pip install pytest
+> python -m pytest ./test
+```
+
 ## Contributing
 
 This documentation is managed by [rapsealk](https://github.com/rapsealk) and [bludcode](https://github.com/bludcode),
